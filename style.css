@@ -121,3 +121,153 @@ img,video{
     object-fit:cover;
   }
 }
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Our Work - Professional Layout */
+.our-work {
+  width: 100%;
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.companies-box,
+.video-box {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.companies-box h3,
+.video-box h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Four company cards */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.company-card {
+  min-width: 0;
+  min-height: 110px;
+  padding: 12px 6px;
+  background: #f8fafc;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.company-logo {
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.company-card p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.waaree {
+  color: #00843d;
+}
+
+.tata {
+  color: #1261a0;
+}
+
+.adani {
+  color: #174ea6;
+}
+
+.utl {
+  color: #d71920;
+}
+
+/* Video */
+.video-box video {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  border-radius: 14px;
+  background: #111;
+  object-fit: contain;
+}
+
+.video-box p {
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .our-work {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .work-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .company-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .companies-box,
+  .video-box {
+    padding: 12px;
+    border-radius: 15px;
+  }
+
+  .company-card {
+    min-height: 85px;
+    padding: 7px 2px;
+  }
+
+  .company-logo {
+    min-height: 38px;
+    font-size: 11px;
+  }
+
+  .company-card p {
+    font-size: 8px;
+  }
+
+  .video-box video {
+    width: 100%;
+    max-height: 300px;
+  }
+}
