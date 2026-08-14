@@ -27,7 +27,9 @@ video {
   display: block;
 }
 
-/* COMMON */
+/* =========================
+   COMMON
+   ========================= */
 
 .section {
   width: 100%;
@@ -172,7 +174,11 @@ video {
 
 .our-work {
   background:
-    radial-gradient(circle at top right, rgba(245, 158, 11, 0.10), transparent 30%),
+    radial-gradient(
+      circle at top right,
+      rgba(245, 158, 11, 0.10),
+      transparent 30%
+    ),
     #f4f8fc;
 }
 
@@ -201,7 +207,9 @@ video {
   margin-bottom: 24px;
 }
 
-/* COMPANY LOGOS */
+/* =========================
+   COMPANY LOGOS
+   ========================= */
 
 .company-grid {
   display: grid;
@@ -221,6 +229,7 @@ video {
   justify-content: center;
   text-align: center;
   transition: 0.3s ease;
+  overflow: hidden;
 }
 
 .company-card:hover {
@@ -228,11 +237,14 @@ video {
   box-shadow: 0 12px 25px rgba(15, 35, 70, 0.10);
 }
 
+/* LOGO TEXT */
+
 .company-logo {
   font-weight: 900;
   font-size: 24px;
   margin-bottom: 7px;
   letter-spacing: 0.5px;
+  line-height: 1.1;
 }
 
 .company-card p {
@@ -241,7 +253,7 @@ video {
   font-weight: 600;
 }
 
-/* LOGO TEXT STYLING */
+/* COMPANY COLORS */
 
 .company-logo.waaree {
   color: #16803c;
@@ -252,14 +264,26 @@ video {
 }
 
 .company-logo.adani {
-  color: #16803c;
+  color: #d81b60;
 }
 
 .company-logo.utl {
-  color: #1d4ed8;
+  color: #e11d48;
 }
 
-/* VIDEO */
+/* IF REAL LOGO IMAGES ARE USED */
+
+.company-logo img {
+  width: 150px;
+  max-width: 100%;
+  height: 65px;
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+
+/* =========================
+   VIDEO
+   ========================= */
 
 .video-box video {
   width: 100%;
@@ -278,7 +302,7 @@ video {
 }
 
 /* =========================
-   GENERAL CARDS / BUTTONS
+   GENERAL
    ========================= */
 
 .card,
@@ -294,10 +318,11 @@ a {
 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE - TABLET
    ========================= */
 
 @media (max-width: 1000px) {
+
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -311,7 +336,12 @@ a {
   }
 }
 
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+
 @media (max-width: 650px) {
+
   .section {
     padding: 50px 18px;
   }
@@ -340,6 +370,8 @@ a {
     font-size: 21px;
   }
 
+  /* 4 LOGOS = 2 X 2 */
+
   .company-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -354,6 +386,11 @@ a {
     font-size: 19px;
   }
 
+  .company-logo img {
+    width: 120px;
+    height: 55px;
+  }
+
   .video-box video {
     width: 100%;
     height: auto;
@@ -362,7 +399,12 @@ a {
   }
 }
 
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
 @media (max-width: 400px) {
+
   .company-grid {
     gap: 10px;
   }
@@ -373,5 +415,10 @@ a {
 
   .company-logo {
     font-size: 17px;
+  }
+
+  .company-logo img {
+    width: 105px;
+    height: 50px;
   }
 }
